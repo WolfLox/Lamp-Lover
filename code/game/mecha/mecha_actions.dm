@@ -5,6 +5,7 @@
 	var/datum/action/innate/mecha/mech_toggle_lights/lights_action = new
 	var/datum/action/innate/mecha/mech_view_stats/stats_action = new
 	var/datum/action/innate/mecha/mech_defence_mode/defense_action = new
+	var/datum/action/innate/mecha/strafe/strafe_action = new
 	var/datum/action/innate/mecha/mech_overload_mode/overload_action = new
 	var/datum/action/innate/mecha/mech_toggle_thrusters/thrusters_action = new
 	var/datum/effect_system/smoke_spread/smoke_system = new //not an action, but trigged by one
@@ -20,6 +21,7 @@
 	internals_action.Grant(user, src)
 	lights_action.Grant(user, src)
 	stats_action.Grant(user, src)
+	strafe_action.Grant(user, src)
 
 /obj/mecha/proc/RemoveActions(mob/living/user, human_occupant = 0)
 	if(human_occupant)
@@ -27,6 +29,7 @@
 	internals_action.Remove(user)
 	lights_action.Remove(user)
 	stats_action.Remove(user)
+	strafe_action.Remove(user)
 
 /datum/action/innate/mecha
 	check_flags = AB_CHECK_RESTRAINED | AB_CHECK_STUNNED | AB_CHECK_CONSCIOUS
@@ -65,6 +68,17 @@
 	chassis.occupant_message("Now taking air from [chassis.use_internal_tank ? "internal airtank" : "environment"].")
 	chassis.log_message("Now taking air from [chassis.use_internal_tank ? "internal airtank" : "environment"].")
 	UpdateButtonIcon()
+
+/datum/action/innate/mecha/strafe
+	name = "Toggle Strafing."
+	button_icon_state = "strafe"
+
+/datum/action/innate/mecha/strafe/Activate()
+	if(!owner || !chassis || chassis.occupant != owner)
+		return
+	chassis.strafe = !chassis.strafe
+	//to_chat(occupants, "strafing mode [chassis.strafe?"on":"off"].")
+	chassis.occupant_message("<font color=\"[chassis.strafe?"#00f\">En":"#f00\">Dis"]abled strafing.</font>")
 
 /datum/action/innate/mecha/mech_toggle_lights
 	name = "Toggle Lights"

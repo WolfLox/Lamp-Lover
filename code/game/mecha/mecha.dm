@@ -94,6 +94,8 @@
 	var/smoke_ready = 1
 	var/smoke_cooldown = 100
 	var/zoom_mode = FALSE
+	var/canstrafe = TRUE
+	var/strafe = FALSE
 	var/phasing = FALSE
 	var/phasing_energy_drain = 200
 	var/phase_state = "" //icon_state when phasing
@@ -248,6 +250,7 @@
 //////////////////////////////////
 ////////  Movement procs  ////////
 //////////////////////////////////
+
 /obj/mecha/Process_Spacemove(var/movement_dir = 0)
 	. = ..()
 	if(.)
@@ -300,6 +303,7 @@
 
 	var/move_result = 0
 	var/move_type = 0
+	var/olddir = dir
 	if(internal_damage & MECHA_INT_CONTROL_LOST)
 		if(direction & (direction - 1))	//moved diagonally
 			glide_for(step_in * 1.41)
@@ -307,9 +311,16 @@
 			glide_for(step_in)
 		move_result = mechsteprand()
 		move_type = MECHAMOVE_RAND
-	else if(dir != direction)
+	else if(dir != direction & !strafe)
 		move_result = mechturn(direction)
 		move_type = MECHAMOVE_TURN
+
+	else if(dir != direction & strafe)
+		move_result = mechstep(direction)
+		move_type = MECHAMOVE_STEP
+		dir = (olddir)
+
+
 	else
 		if(direction & (direction - 1))	//moved diagonally
 			glide_for(step_in * 1.41)
@@ -323,6 +334,7 @@
 		can_move = world.time + step_in
 		return TRUE
 	return FALSE
+
 
 /obj/mecha/proc/aftermove(move_type)
 	use_power(step_energy_drain)
@@ -366,6 +378,7 @@
 				can_move = world.time + (step_in * 3)
 	else if(stepsound)
 		playsound(src, stepsound, 40, 1)
+
 
 /obj/mecha/proc/mechsteprand()
 	. = step_rand(src)
