@@ -46,6 +46,26 @@
 			update_icon()
 			return 1
 
+/obj/item/storage/box/pouch
+	name = "pouch"
+	desc = "Подсумок на два магазина... Без ограничений по габаритам магазинов"
+	icon = 'icons/obj/cigarettes.dmi'
+	icon_state = "matchbox"
+	item_state = "matchbox"
+	storage_slots = 2
+	w_class = WEIGHT_CLASS_TINY
+	max_w_class = WEIGHT_CLASS_TINY
+	slot_flags = SLOT_BELT
+	can_hold = list(/obj/item/ammo_box/magazine)
+
+/obj/item/storage/box/pouch/attackby(var/obj/item/P as obj, mob/user as mob, params)
+    if(istype(P, /obj/item/gun/projectile/automatic))
+        var/obj/item/gun/projectile/automatic/AP = P
+        AP.attackby(contents.len(1), user)
+        magazine.loc = pouch[length]
+    else
+        return ..()
+
 /obj/item/gun/projectile/automatic/ui_action_click(var/owner, var/action_type)
     if (ispath(action_type, /datum/action/item_action/toggle_firemode))
         burst_select()
@@ -341,3 +361,26 @@
 /obj/item/gun/projectile/automatic/lasercarbine/update_icon()
 	..()
 	icon_state = "lasercarbine[magazine ? "-[CEILING(get_ammo(0)/5, 1)*5]" : ""]"
+
+
+//POUCHES
+//obj/item/storage/box/pouch
+//	name = "pouch"
+//	desc = "Подсумок на два магазина... Без ограничений по габаритам магазинов"
+//	icon = 'icons/obj/cigarettes.dmi'
+//	icon_state = "matchbox"
+//	item_state = "matchbox"
+//	storage_slots = 2
+//	w_class = WEIGHT_CLASS_TINY
+//	max_w_class = WEIGHT_CLASS_TINY
+//	slot_flags = SLOT_BELT
+//	can_hold = list(/obj/item/ammo_box/magazine)
+//
+//obj/item/storage/box/pouch/attackby(var/obj/item/P as obj, mob/user as mob, params)
+//    if(istype(P, /obj/item/gun/projectile/automatic))
+ //       var/obj/item/gun/projectile/automatic/AP = P
+ //       AP.attackby(O[1], user)
+ //       magazine.loc = pouch[len]
+ //   else
+ //       return ..()
+
