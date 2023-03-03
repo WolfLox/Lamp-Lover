@@ -61,10 +61,10 @@
 /obj/item/storage/box/pouch/attackby(var/obj/item/P as obj, mob/user as mob, params)
     if(istype(P, /obj/item/gun/projectile/automatic))
         var/obj/item/gun/projectile/automatic/AP = P
-        AP.attackby(contents.len(1), user)
-        magazine.loc = pouch[length]
-    else
-        return ..()
+		P.attackby(list.find(magazine), user)
+
+
+
 
 /obj/item/gun/projectile/automatic/ui_action_click(var/owner, var/action_type)
     if (ispath(action_type, /datum/action/item_action/toggle_firemode))
