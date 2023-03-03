@@ -59,12 +59,9 @@
 	can_hold = list(/obj/item/ammo_box/magazine)
 
 /obj/item/storage/box/pouch/attackby(var/obj/item/P as obj, mob/user as mob, params)
-    if(istype(P, /obj/item/gun/projectile/automatic))
-        var/obj/item/gun/projectile/automatic/AP = P
-		P.attackby(list.find(magazine), user)
-
-
-
+	if(istype(P, /obj/item/gun/projectile/automatic))
+		var/obj/item/gun/projectile/automatic/AP = P
+		AP.attackby(M, user)
 
 /obj/item/gun/projectile/automatic/ui_action_click(var/owner, var/action_type)
     if (ispath(action_type, /datum/action/item_action/toggle_firemode))
