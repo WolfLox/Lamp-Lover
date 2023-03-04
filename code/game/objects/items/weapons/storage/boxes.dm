@@ -1240,6 +1240,29 @@
 		new /obj/item/reagent_containers/food/snacks/candy/jellybean/wtf(src)
 	new /obj/item/reagent_containers/food/snacks/candy/sucker(src)
 
+/obj/item/storage/box/pouch
+	name = "Подсумок"
+	desc = "Подсумок на два магазина... Без ограничений по габаритам магазинов, что странно"
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "pouch"
+	item_state = "pouch"
+	storage_slots = 2
+	w_class = WEIGHT_CLASS_TINY
+	slot_flags = SLOT_BELT
+	can_hold = list(/obj/item/ammo_box/magazine)
+
+/obj/item/storage/box/pouch/fast
+	name = "Подсумок высокоскоростной"
+	desc = "Подсумок на два магазина, настолько просто перезаряжать оружие ещё нельзя было"
+	icon_state = "pouch-fast"
+	item_state = "pouch-fast"
+
+/obj/item/storage/box/pouch/fast/attackby(var/obj/item/A as obj, mob/user as mob, params)
+	.=..()
+	if(istype(A, /obj/item/gun/projectile/automatic))
+		for(var/obj/item/ammo_box/magazine/MA in contents)
+			A.attackby(MA, user)
+			return
 #undef NODESIGN
 #undef NANOTRASEN
 #undef SYNDI
