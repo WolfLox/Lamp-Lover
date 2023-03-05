@@ -30,10 +30,15 @@
 		var/obj/item/ammo_box/magazine/AM = A
 		if(istype(AM, mag_type))
 			if(magazine)
+				if(AM.loc == (/obj/item/storage/box/pouch/fast))
+					magazine.loc = AM.loc
+				else
+					return 0
+					//magazine.loc = get_turf(loc)
 				to_chat(user, "<span class='notice'>You perform a tactical reload on \the [src], replacing the magazine.</span>")
-				magazine.loc = get_turf(loc)
 				magazine.update_icon()
 				magazine = null
+
 			else
 				to_chat(user, "<span class='notice'>You insert the magazine into \the [src].</span>")
 			if(alarmed)

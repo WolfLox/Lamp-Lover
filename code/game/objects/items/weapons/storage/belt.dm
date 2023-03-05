@@ -237,7 +237,7 @@
 		/obj/item/forensics/sample_kit/powder,
 		/obj/item/forensics/sample_kit,
 		/obj/item/eftpos/sec,
-		/obj/item/storage/box/pouch)
+		/obj/item/storage/pouch)
 
 /obj/item/storage/belt/security/sec/New()
 	..()
