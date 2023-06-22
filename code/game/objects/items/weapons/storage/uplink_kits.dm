@@ -137,8 +137,7 @@
 	icon_state = "box_of_doom"
 
 /obj/item/storage/box/syndie_kit/mantisblade
-	name = "Boxed Space Suit and Helmet"
-	max_w_class = WEIGHT_CLASS_NORMAL
+	name = "Mantis blade set"
 
 /obj/item/storage/box/syndie_kit/mantisblade/populate_contents()
 	new /obj/item/autoimplanter/oneuse/mantisblade(src)
