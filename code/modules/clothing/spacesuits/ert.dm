@@ -12,6 +12,7 @@
 	strip_delay = 130
 
 	sprite_sheets = list(
+		"Vulpkanin" = 'icons/mob/species/vulpkanin/helmet.dmi',
 		"Grey" = 'icons/mob/species/grey/helmet.dmi',
 		"Vox" = 'icons/mob/species/vox/helmet.dmi'
 		)
@@ -65,6 +66,7 @@
 	slowdown = 0
 	resistance_flags = FIRE_PROOF
 	sprite_sheets = list(
+		"Vulpkanin" = 'icons/mob/species/vulpkanin/suit.dmi',
 		"Drask" = 'icons/mob/species/drask/suit.dmi',
 		"Vox" = 'icons/mob/species/vox/suit.dmi'
 		)
