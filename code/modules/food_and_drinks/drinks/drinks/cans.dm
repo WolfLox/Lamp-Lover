@@ -174,6 +174,12 @@
 	icon_state = "cola"
 	list_reagents = list("cola" = 30)
 
+/obj/item/reagent_containers/food/drinks/cans/energy
+	name = "space cola"
+	desc = "Cola. in space."
+	icon_state = "cola"
+	list_reagents = list("energy_drink" = 30)
+
 /obj/item/reagent_containers/food/drinks/cans/beer
 	name = "space beer"
 	desc = "Contains only water, malt and hops."

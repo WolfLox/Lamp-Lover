@@ -80,6 +80,32 @@
 	REMOVE_TRAIT(M, TRAIT_GOTTAGONOTSOFAST, id)
 	..()
 
+/datum/reagent/consumable/drink/cold/energy
+	name = "Energy drink"
+	id = "energy_drink"
+	description = "My stop."
+	color = "#20a81b"
+	drink_name = "Energy drink"
+	drink_desc = "Don't cry, Don't raise your eye, It's only nuclear wasteland"
+
+/datum/reagent/consumable/drink/cold/energy/on_mob_life(mob/living/M)
+	var/update_flags = STATUS_UPDATE_NONE
+	M.AdjustSleeping(-2 SECONDS)
+	if(prob(1))
+		M.ForceContractDisease(new /datum/disease/critical/heart_failure)
+	ADD_TRAIT(M, TRAIT_GOTTAGONOTFAST, id)
+	if(M.reagents.get_reagent_amount("epinephrine") > 0)
+		var/obj/item/organ/internal/heart/heart = M.get_int_organ(/obj/item/organ/internal/heart)
+		heart?.receive_damage(1)
+	else if(M.reagents.get_reagent_amount("coffee") > 0)
+		if(prob(1))
+			M.ForceContractDisease(new /datum/disease/critical/heart_failure)
+	return ..() | update_flags
+
+/datum/reagent/consumable/drink/cold/energy/on_mob_delete(mob/living/M)
+	REMOVE_TRAIT(M, TRAIT_GOTTAGONOTFAST, id)
+	..()
+
 /datum/reagent/consumable/drink/cold/spacemountainwind
 	name = "Space Mountain Wind"
 	id = "spacemountainwind"

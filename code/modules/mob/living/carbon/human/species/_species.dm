@@ -271,6 +271,8 @@
 			. -= 1
 		else if(HAS_TRAIT(H, TRAIT_GOTTAGONOTSOFAST))
 			. -= 0.5
+		else if(HAS_TRAIT(H, TRAIT_GOTTAGONOTFAST))
+			. -= 0.25
 
 		var/ignoreslow = FALSE
 		if((H.status_flags & IGNORESLOWDOWN) || (RUN in H.mutations) || (H.status_flags & GODMODE))
