@@ -79,7 +79,7 @@
 
 	return FALSE
 
-/obj/item/radio/headset/alt
+/obj/item/radio/headset/alt //mark
 	name = "bowman headset"
 	desc = "An updated, modular intercom that fits over the head. Takes encryption keys. Protects ears from flashbangs."
 	flags = EARBANGPROTECT
@@ -390,7 +390,7 @@
 		return FALSE
 	return ..()
 
-/obj/item/radio/headset/attackby(obj/item/W as obj, mob/user as mob)
+/obj/item/radio/headset/attackby(obj/item/W as obj, mob/user as mob) // mark2
 	if(istype(W, /obj/item/encryptionkey/))
 		user.set_machine(src)
 		if(keyslot1 && keyslot2)
@@ -502,3 +502,17 @@
 	keyslot1 = new /obj/item/encryptionkey/syndicate
 	syndiekey = keyslot1
 	recalculateChannels()
+
+/obj/item/radio/headset/attacked_by(obj/item/I, mob/user)
+	. = ..()
+	if(istype(I, /obj/item/conversion_headset_kit) && !(flags & (EARBANGPROTECT)))
+		flags = EARBANGPROTECT
+		var/choice = input(user,"Select your skin.","Reskin Gun") in options
+		options = /obj/item/radio/headset
+		if(src && choice && !user.incapacitated() && in_range(user,src))
+			if(options[choice] == null)
+				return
+			current_skin = options[choice]
+			to_chat(user, "Your gun is now skinned as [choice]. Say hello to your new friend.")
+			update_icon()
+

@@ -376,3 +376,11 @@ effective or pretty fucking useless.
 	charges = 8
 	max_charges = 8
 	flawless = TRUE
+
+/obj/item/conversion_headset_kit
+	icon = 'icons/obj/storage.dmi'
+	w_class = WEIGHT_CLASS_TINY
+	throwforce = 5
+	origin_tech = "magnets=3;combat=3;syndicate=3"
+	icon_state = "syndicate"
+	item_state = "toolbox_syndi"
