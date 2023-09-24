@@ -502,17 +502,3 @@
 	keyslot1 = new /obj/item/encryptionkey/syndicate
 	syndiekey = keyslot1
 	recalculateChannels()
-
-/obj/item/radio/headset/attacked_by(obj/item/I, mob/user)
-	. = ..()
-	if(istype(I, /obj/item/conversion_headset_kit) && !(flags & (EARBANGPROTECT)))
-		flags = EARBANGPROTECT
-		var/choice = input(user,"Select your skin.","Reskin Gun") in options
-		options = /obj/item/radio/headset
-		if(src && choice && !user.incapacitated() && in_range(user,src))
-			if(options[choice] == null)
-				return
-			current_skin = options[choice]
-			to_chat(user, "Your gun is now skinned as [choice]. Say hello to your new friend.")
-			update_icon()
-

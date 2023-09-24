@@ -14,6 +14,10 @@ effective or pretty fucking useless.
 
 */
 
+
+var/list/optionshs = list()
+var/current_skin = null
+
 /obj/item/batterer
 	name = "mind batterer"
 	desc = "A strange device with twin antennas."
@@ -384,3 +388,30 @@ effective or pretty fucking useless.
 	origin_tech = "magnets=3;combat=3;syndicate=3"
 	icon_state = "syndicate"
 	item_state = "toolbox_syndi"
+
+
+/obj/item/conversion_headset_kit/attack(/obj/item/radio/headset, mob/living/user)
+	. = ..()
+	if(user.incapacitated())
+		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
+		return
+	if(EARBANGPROTECT)
+		reskin_headset(user)
+
+
+
+/obj/item/conversion_headset_kit/proc/reskin_headset(mob/M)
+	var/headset_choise = input(M, "Select your skin ") in optionshs
+
+	if(src && headset_choise && !M.incapacitated() && in_range(M, src))
+		current_skin = optionshs[headset_choise]
+		to_chat(M, "Your headset is now skined as [headset_choise].")
+		update_icon()
+		for(var/V in typesof(/obj/item/radio/headset))
+			if(ispath(V) && ispath(V, /obj/item))
+				var/obj/item/I = V
+				if((initial(I.flags) & ABSTRACT) || !initial(I.icon_state))
+					continue
+				var/chameleon_item_name = "[initial(I.name)] ([initial(I.icon_state)])"
+				optionshs[chameleon_item_name] = I
+
