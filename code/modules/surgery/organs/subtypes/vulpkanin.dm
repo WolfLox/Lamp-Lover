@@ -1,6 +1,3 @@
-/obj/item/organ/external/head/vulpkanin
-	species_type = /datum/species/vulpkanin
-
 /obj/item/organ/internal/liver/vulpkanin
 	species_type = /datum/species/vulpkanin
 	name = "vulpkanin liver"
