@@ -82,6 +82,10 @@
 	damage = 25
 	stamina = 20
 
+/obj/item/projectile/bullet/weakbullet3/hp
+	damage = 30
+	armour_penetration = -20
+
 /obj/item/projectile/bullet/weakbullet4
 	name = "rubber bullet"
 	damage = 5
@@ -109,8 +113,8 @@
 	armour_penetration = 10
 
 /obj/item/projectile/bullet/armourpiercing
-	damage = 17
-	armour_penetration = 10
+	damage = 20
+	armour_penetration = 30
 
 /obj/item/projectile/bullet/pellet
 	name = "pellet"

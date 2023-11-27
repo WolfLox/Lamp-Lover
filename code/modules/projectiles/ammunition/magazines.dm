@@ -329,9 +329,60 @@
 	caliber = "9mm"
 	max_ammo = 32
 
-/obj/item/ammo_box/magazine/uzim9mm/update_icon()
+/obj/item/ammo_box/magazine/uzim9mm/ap
+	name = "uzi magazine (9mm)"
+	icon_state = "uzi9mm-ap-32"
+	ammo_type = /obj/item/ammo_casing/c9mm/ap
+	caliber = "9mm"
+	max_ammo = 32
+
+/obj/item/ammo_box/magazine/uzim9mm/ap/update_icon()
 	..()
-	icon_state = "uzi9mm-[round(ammo_count(),4)]"
+	icon_state = "uzi9mm-ap-[round(ammo_count(),4)]"
+
+/obj/item/ammo_box/magazine/uzim9mm/hp
+	name = "uzi magazine (9mm)"
+	icon_state = "uzi9mmhp-32"
+	ammo_type = /obj/item/ammo_casing/c9mm/hp
+	caliber = "9mm"
+	max_ammo = 32
+
+/obj/item/ammo_box/magazine/uzim9mm/hp/update_icon()
+	..()
+	icon_state = "uzi9mm-hp-[round(ammo_count(),4)]"
+
+/obj/item/ammo_box/magazine/uzim9mm/drum
+	name = "uzi drum magazine (9mm)"
+	icon_state = "uzi9mm-drum-64"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 64
+
+/obj/item/ammo_box/magazine/uzim9mm/drum/update_icon()
+	..()
+	icon_state = "uzi9mm-drum-[round(ammo_count(),64)]"
+
+/obj/item/ammo_box/magazine/uzim9mm/drum/hp
+	name = "uzi drum magazine (9mm)"
+	icon_state = "uzi9mm-drum-hp-64"
+	ammo_type = /obj/item/ammo_casing/c9mm/hp
+	caliber = "9mm"
+	max_ammo = 64
+
+/obj/item/ammo_box/magazine/uzim9mm/drum/hp/update_icon()
+	..()
+	icon_state = "uzi9mm-drum-hp-[round(ammo_count(),64)]"
+
+/obj/item/ammo_box/magazine/uzim9mm/drum/ap
+	name = "uzi drum magazine (9mm)"
+	icon_state = "uzi9mm-drum-ap-64"
+	ammo_type = /obj/item/ammo_casing/c9mm/ap
+	caliber = "9mm"
+	max_ammo = 64
+
+/obj/item/ammo_box/magazine/uzim9mm/drum/ap/update_icon()
+	..()
+	icon_state = "uzi9mm-drum-ap-[round(ammo_count(),64)]"
 
 /obj/item/ammo_box/magazine/smgm9mm
 	name = "SMG magazine (9mm)"

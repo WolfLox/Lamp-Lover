@@ -148,7 +148,7 @@
         return TRUE
 
 //Type-U3 Uzi//
-/obj/item/gun/projectile/automatic/mini_uzi
+/obj/item/gun/projectile/automatic/mini_uzi // Я тут
 	name = "\improper ''Type U3 Uzi"
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "mini-uzi"
@@ -156,6 +156,43 @@
 	mag_type = /obj/item/ammo_box/magazine/uzim9mm
 	fire_sound = 'sound/weapons/gunshots/1uzi.ogg'
 	burst_size = 4
+
+
+/obj/item/gun/projectile/automatic/mini_uzi/proc/update_magazine()
+	if(istype(magazine, /obj/item/ammo_box/magazine/uzim9mm/drum))
+		icon_state = "mini-uzi-64"
+		if(istype(magazine, /obj/item/ammo_box/magazine/uzim9mm/drum))
+			w_class = WEIGHT_CLASS_BULKY
+		else
+			w_class = WEIGHT_CLASS_NORMAL
+	if(istype(magazine, /obj/item/ammo_box/magazine/uzim9mm/drum))
+	else
+		icon_state = "mini-uzi-32"
+		w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/gun/projectile/automatic/mini_uzi/New()
+	..()
+	update_icon()
+
+/obj/item/gun/projectile/automatic/mini_uzi/update_icon()
+	overlays.Cut()
+	update_magazine()
+	icon_state = "mini-uzi[chambered ? "" : "-e"]"
+	if(istype(magazine, /obj/item/ammo_box/magazine/uzim9mm/drum))
+		icon_state = "mini-uzi-64[chambered ? "" : "-e"]"
+	if(istype(magazine, /obj/item/ammo_box/magazine/uzim9mm))
+		icon_state = "mini-uzi-32[chambered ? "" : "-e"]"
+
+
+
+/obj/item/gun/projectile/automatic/mini_uzi/attackby(var/obj/item/A as obj, mob/user as mob, params)
+	if(istype(A, /obj/item/ammo_box/magazine/uzim9mm/drum))
+		if(istype(loc, /obj/item/storage))	// To prevent inventory exploits
+			var/obj/item/storage/Strg = loc
+			if(Strg.max_w_class < WEIGHT_CLASS_BULKY)
+				to_chat(user, "<span class='warning'>You can't reload [src], with a XL mag, while it's in a normal bag.</span>")
+				return
+	return ..()
 
 //M-90gl Carbine//
 /obj/item/gun/projectile/automatic/m90

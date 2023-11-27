@@ -977,6 +977,46 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 2
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 
+/datum/uplink_item/ammo/uzi/hp
+	name = "Type U3 Uzi - 9mm HP Magazine"
+	desc = "Additional magazine for 30 rounds of 9 mm caliber Hollow Point type for use in the Type-U3 Uzi."
+	reference = "UZAHP"
+	item = /obj/item/ammo_box/magazine/uzim9mm/hp
+	cost = 2
+	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
+
+/datum/uplink_item/ammo/uzi
+	name = "Type U3 Uzi - 9mm AP Magazine"
+	desc = "Additional magazine for 30 rounds of 9 mm caliber armorpiercing type for use in the Type-U3 Uzi."
+	reference = "UZAAP"
+	item = /obj/item/ammo_box/magazine/uzim9mm/ap
+	cost = 3
+	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
+
+/datum/uplink_item/ammo/uzi/drum
+	name = "Type U3 Uzi - 9mm Drum Magazine"
+	desc = "Extended magazine 64 round 9mm magazine for use in Type-U3 Uzi."
+	reference = "UZAD"
+	item = /obj/item/ammo_box/magazine/uzim9mm/drum
+	cost = 4
+	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
+
+/datum/uplink_item/ammo/uzi/drum/hp
+	name = "Type U3 Uzi - 9mm Hollow Point Drum Magazine"
+	desc = "Extended magazine for 64 rounds of 9 mm caliber Hollow Point type for use in the Type-U3 Uzi."
+	reference = "UZADHP"
+	item = /obj/item/ammo_box/magazine/uzim9mm/drum/hp
+	cost = 4
+	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
+
+/datum/uplink_item/ammo/uzi/drum/ap
+	name = "Type U3 Uzi - Armourpiercing 9mm Drum Magazine"
+	desc = "Extended magazine for 64 rounds of 9 mm caliber armorpiercing type for use in the Type-U3 Uzi."
+	reference = "UZADAP"
+	item = /obj/item/ammo_box/magazine/uzim9mm/drum/ap
+	cost = 6
+	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
+
 /datum/uplink_item/ammo/uzi_ammobag
 	name = "Type U3 Uzi - 9mm Ammo Duffel Bag"
 	desc = "A duffel bag filled with enough 9mm ammo to supply an entire gang. Groove street forever."

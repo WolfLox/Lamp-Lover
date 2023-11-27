@@ -118,6 +118,9 @@
 	projectile_type = /obj/item/projectile/bullet/incendiary/firebullet
 	muzzle_flash_color = LIGHT_COLOR_FIRE
 
+/obj/item/ammo_casing/c9mm/hp
+	projectile_type = /obj/item/projectile/bullet/weakbullet3/hp
+
 /obj/item/ammo_casing/c46x30mm
 	desc = "A 4.6x30mm bullet casing."
 	materials = list(MAT_METAL = 1000)
