@@ -154,6 +154,43 @@
 				return
 	..()
 
+/*
+ * Glowsticks Box
+ */
+
+/obj/item/storage/fancy/glowstick
+	storage_slots = 6
+	icon = 'icons/obj/chemglow.dmi'
+	icon_state = "chemglow_box_closed"
+	can_hold = list(
+		/obj/item/flashlight/flare/glowstick
+	)
+
+/obj/item/storage/fancy/glowstick/update_icon(var/itemremoved = 0)
+	var/total_contents = src.contents.len - itemremoved
+	overlays = list()
+	overlays += image('icons/obj/chemglow.dmi',"chemglow_box_open")
+	if(total_contents == 6)
+		overlays = list()
+		overlays += image('icons/obj/chemglow.dmi',"chemglow_box_closed")
+	icon_state = "chemglow_box_open"
+	for(var/I in 1 to total_contents)
+		for(var/var/obj/item/flashlight/flare/glowstick/glowstick in contents)
+			overlays += image('icons/obj/chemglow.dmi', "overlay_[I]")
+		//overlays += image('icons/obj/chemglow.dmi', "overlays_[I]")
+
+
+/obj/item/storage/fancy/glowstick/populate_contents()
+	new /obj/item/flashlight/flare/glowstick/random(src)
+	new /obj/item/flashlight/flare/glowstick/blue(src)
+	new /obj/item/flashlight/flare/glowstick/red(src)
+	new /obj/item/flashlight/flare/glowstick/orange(src)
+	new /obj/item/flashlight/flare/glowstick/pink(src)
+	new /obj/item/flashlight/flare/glowstick/yellow(src)
+	update_icon()
+
+
+
 ////////////
 //CIG PACK//
 ////////////
