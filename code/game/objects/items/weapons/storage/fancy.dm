@@ -159,29 +159,45 @@
  */
 
 /obj/item/storage/fancy/glowstick
+	name = "box of glowsticks"
+	desc = "A box full of glow sticks for your party!"
 	storage_slots = 6
 	icon = 'icons/obj/chemglow.dmi'
 	icon_state = "chemglow_box_closed"
+	item_state = "chemglowbox"
 	can_hold = list(
 		/obj/item/flashlight/flare/glowstick
 	)
+	foldable = /obj/item/stack/sheet/cardboard
+	foldable_amt = 2
 
 /obj/item/storage/fancy/glowstick/update_icon(var/itemremoved = 0)
 	var/total_contents = src.contents.len - itemremoved
 	overlays = list()
-	overlays += image('icons/obj/chemglow.dmi',"chemglow_box_open")
+	overlays += image('icons/obj/chemglow.dmi',"chemglow_box_opened")
 	if(total_contents == 6)
 		overlays = list()
 		overlays += image('icons/obj/chemglow.dmi',"chemglow_box_closed")
 	icon_state = "chemglow_box_open"
-	for(var/I in 1 to total_contents)
-		for(var/var/obj/item/flashlight/flare/glowstick/glowstick in contents)
-			overlays += image('icons/obj/chemglow.dmi', "overlay_[I]")
-		//overlays += image('icons/obj/chemglow.dmi', "overlays_[I]")
-
+	var/I = 1
+	for(var/obj/item/flashlight/flare/glowstick/F in contents)
+		switch(F:colourName)
+			if("red")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_red", pixel_x = (0 + ( I - 1) * 2))
+			if("blue")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_blue", pixel_x = (0 + ( I - 1) * 2))
+			if("yellow")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_yellow", pixel_x = (0 + ( I - 1) * 2))
+			if("pink")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_pink", pixel_x = (0 + ( I - 1) * 2))
+			if("orange")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_orange", pixel_x = (0 + ( I - 1) * 2))
+			if("green")
+				overlays += image('icons/obj/chemglow.dmi', "overlay_green", pixel_x = (0 + ( I - 1) * 2))
+		I += 1
 
 /obj/item/storage/fancy/glowstick/populate_contents()
-	new /obj/item/flashlight/flare/glowstick/random(src)
+	new /obj/item/flashlight/flare/glowstick(src)
 	new /obj/item/flashlight/flare/glowstick/blue(src)
 	new /obj/item/flashlight/flare/glowstick/red(src)
 	new /obj/item/flashlight/flare/glowstick/orange(src)
@@ -189,6 +205,8 @@
 	new /obj/item/flashlight/flare/glowstick/yellow(src)
 	update_icon()
 
+/obj/item/storage/fancy/glowstick/empty/populate_contents()
+	return
 
 
 ////////////

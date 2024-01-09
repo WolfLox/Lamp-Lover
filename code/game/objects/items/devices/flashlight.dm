@@ -241,6 +241,7 @@
 	produce_heat = 0
 	fuel_lower = 1600
 	fuel_upp = 2000
+	var/colourName = "green"
 
 /obj/item/flashlight/flare/glowstick/Initialize()
 	light_color = color
@@ -266,27 +267,33 @@
 /obj/item/flashlight/flare/glowstick/red
 	name = "red glowstick"
 	color = LIGHT_COLOR_RED
+	colourName = "red"
 
 /obj/item/flashlight/flare/glowstick/blue
 	name = "blue glowstick"
 	color = LIGHT_COLOR_BLUE
+	colourName = "blue"
 
 /obj/item/flashlight/flare/glowstick/orange
 	name = "orange glowstick"
 	color = LIGHT_COLOR_ORANGE
+	colourName = "orange"
 
 /obj/item/flashlight/flare/glowstick/yellow
 	name = "yellow glowstick"
 	color = LIGHT_COLOR_YELLOW
+	colourName = "yellow"
 
 /obj/item/flashlight/flare/glowstick/pink
 	name = "pink glowstick"
 	color = LIGHT_COLOR_PINK
+	colourName = "pink"
 
 /obj/item/flashlight/flare/glowstick/emergency
 	name = "emergency glowstick"
 	desc = "A cheap looking, mass produced glowstick. You can practically feel it was made on a tight budget."
 	color = LIGHT_COLOR_BLUE
+	colourName = "blue"
 	fuel_lower = 30
 	fuel_upp = 90
 
