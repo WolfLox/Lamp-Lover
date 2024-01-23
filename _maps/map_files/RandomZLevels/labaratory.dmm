@@ -3,35 +3,29 @@
 /obj/machinery/gateway{
 	dir = 6
 	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
-/area/space)
-"bW" = (
-/obj/structure/closet/secure_closet,
 /turf/simulated/floor/plasteel,
 /area/space)
-"cc" = (
-/obj/structure/chair/office{
-	dir = 1
+"bW" = (
+/turf/simulated/floor/plasteel{
+	icon_state = "red"
 	},
+/area/space)
+"cc" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/southleft,
 /turf/simulated/floor/plasteel,
 /area/space)
 "cj" = (
-/obj/machinery/door/airlock/syndicate/medical/glass,
-/obj/structure/curtain/open,
-/turf/simulated/floor/plasteel,
-/area/space)
-"cS" = (
-/obj/structure/holosign/barrier,
-/turf/simulated/floor/plasteel,
-/area/space)
-"de" = (
 /obj/structure/chair/office/dark{
-	dir = 4
+	dir = 8
 	},
-/turf/simulated/floor/plasteel,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "red"
+	},
 /area/space)
 "em" = (
 /obj/machinery/door/poddoor/multi_tile,
@@ -54,9 +48,7 @@
 "fa" = (
 /obj/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "ht" = (
 /obj/structure/sign/biohazard{
@@ -65,84 +57,140 @@
 /turf/simulated/floor/plasteel,
 /area/space)
 "hF" = (
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/structure/table/reinforced,
+/obj/item/book/manual/security_space_law{
+	pixel_x = -3;
+	pixel_y = 5
 	},
-/obj/structure/window/reinforced,
-/obj/structure/closet/secure_closet/research_reagents,
-/turf/simulated/floor/plasteel,
+/obj/item/megaphone,
+/obj/item/radio/intercom{
+	pixel_x = 28;
+	pixel_y = 5
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "hN" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/glass/beaker/large{
-	pixel_x = -5;
-	pixel_y = 1
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "BrigLeft";
+	name = "Brig";
+	req_access = list(63)
 	},
-/obj/item/reagent_containers/glass/beaker/large{
-	pixel_x = -5;
-	pixel_y = 1
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	icon_state = "red"
+	},
 /area/space)
 "hO" = (
 /obj/machinery/gateway{
 	dir = 8
 	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "iu" = (
-/obj/machinery/vending/cigarette/syndicate/free,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "iz" = (
-/obj/structure/window/reinforced,
-/obj/structure/closet/secure_closet/research_reagents,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable,
+/turf/simulated/floor/plating,
 /area/space)
 "jS" = (
-/obj/machinery/smartfridge/medbay,
-/turf/simulated/floor/plasteel,
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "BrigLeft";
+	name = "Brig";
+	req_access = list(63)
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "red"
+	},
 /area/space)
 "kk" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plasteel{
+	dir = 1
 	},
-/obj/structure/closet/secure_closet,
-/turf/simulated/floor/plasteel,
 /area/space)
 "kV" = (
 /obj/structure/sign/securearea{
 	pixel_y = 32
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "lk" = (
-/obj/machinery/chem_dispenser,
-/turf/simulated/floor/plasteel,
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor{
+	dir = 8;
+	name = "Security Reception";
+	req_access = list(1)
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "lZ" = (
-/obj/structure/table,
-/obj/machinery/kitchen_machine/microwave{
-	pixel_x = -1;
-	pixel_y = 7
-	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/wall,
 /area/space)
 "mx" = (
 /turf/simulated/floor/plasteel,
 /area/space)
 "mY" = (
-/obj/machinery/chem_heater,
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	name = "standard air scrubber";
+	on = 1;
+	scrub_N2O = 1;
+	scrub_Toxins = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "red"
+	},
 /area/space)
 "nf" = (
 /obj/effect/spawner/window/reinforced,
@@ -152,129 +200,270 @@
 /turf/simulated/wall/r_wall,
 /area/space)
 "nF" = (
-/obj/machinery/door/window/northleft,
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/southright,
-/turf/simulated/floor/plasteel,
+/obj/item/folder/red,
+/obj/item/pen/multi,
+/obj/machinery/newscaster/security_unit{
+	pixel_x = -28
+	},
+/turf/simulated/floor/plasteel{
+	dir = 10;
+	icon_state = "red"
+	},
 /area/space)
 "qt" = (
 /obj/machinery/gateway{
 	dir = 4
 	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "qC" = (
 /obj/machinery/gateway{
 	dir = 5
 	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
-	},
-/area/space)
-"qX" = (
-/obj/machinery/door/airlock/syndicate/command,
 /turf/simulated/floor/plasteel,
 /area/space)
 "rD" = (
-/obj/machinery/door/airlock/syndicate/public,
-/turf/simulated/floor/plasteel,
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/door_control{
+	desc = "A remote control switch for the brig foyer.";
+	id = "BrigLeft";
+	name = "Left Doors Control";
+	normaldoorcontrol = 1;
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/machinery/door_control{
+	desiredstate = 1;
+	id = "BrigLeft";
+	name = "Left Doors Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = -6;
+	pixel_y = -2;
+	specialfunctions = 4
+	},
+/obj/machinery/door_control{
+	desc = "A remote control switch for the brig foyer.";
+	id = "BrigRight";
+	name = "Right Doors Control";
+	normaldoorcontrol = 1;
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/machinery/door_control{
+	desiredstate = 1;
+	id = "BrigRight";
+	name = "Right Doors Bolt Control";
+	normaldoorcontrol = 1;
+	pixel_x = 6;
+	pixel_y = -2;
+	specialfunctions = 4
+	},
+/obj/machinery/flasher_button{
+	id = "brigkpp";
+	name = "Flasher Control";
+	pixel_x = -17;
+	pixel_y = 2
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "rH" = (
-/obj/structure/reagent_dispensers/fueltank/chem{
-	pixel_x = -32
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
 	},
-/obj/structure/chair/stool,
-/turf/simulated/floor/plasteel,
+/obj/item/pen,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "red"
+	},
 /area/space)
 "rL" = (
-/obj/structure/table,
-/turf/simulated/floor/plasteel,
+/obj/structure/chair/office/dark{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/start/security_officer,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "red"
+	},
 /area/space)
 "rY" = (
-/obj/machinery/door/airlock/syndicate/medical,
-/turf/simulated/floor/plasteel,
+/obj/machinery/light{
+	dir = 1;
+	on = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "red"
+	},
 /area/space)
 "sk" = (
-/obj/structure/barricade/security,
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "sG" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
+/obj/structure/table/reinforced,
+/obj/item/clipboard,
+/obj/item/toy/figure/secofficer,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -28
 	},
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "tD" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/window/northleft,
-/obj/machinery/door/window/southright,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable,
+/turf/simulated/floor/plating,
 /area/space)
 "tI" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/machinery/door/window/northleft{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
+	},
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "uv" = (
-/obj/machinery/vending/coffee/free,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "uT" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
+/obj/machinery/photocopier,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 26
 	},
-/obj/item/ammo_box/shotgun/buck/assassination,
-/obj/item/ammo_box/shotgun/buck/assassination,
-/obj/item/ammo_box/shotgun/buck/assassination,
-/obj/item/ammo_box/shotgun/buck/assassination,
-/obj/machinery/door/window/northleft{
-	dir = 4
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "red"
+	},
 /area/space)
 "vH" = (
-/obj/machinery/vending/syndisnack,
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "wv" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "xZ" = (
-/obj/machinery/door/airlock/syndicate/public/glass,
-/turf/simulated/floor/plasteel,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "BrigRight";
+	name = "Brig";
+	req_access = list(63)
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "red"
+	},
 /area/space)
 "yl" = (
-/obj/structure/closet/wardrobe/white,
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/security/glass{
+	name = "Brig Reception";
+	req_access = list(63)
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "yR" = (
-/obj/machinery/door/window/eastleft,
-/turf/simulated/floor/plasteel,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/computer/secure_data,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "zq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -284,40 +473,6 @@
 /area/space)
 "zJ" = (
 /obj/structure/window/reinforced,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/space)
-"Bf" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/applicator/dual/syndi,
-/obj/item/reagent_containers/food/pill/patch/styptic{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/pill/patch/styptic{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/pill/patch/silver_sulf,
-/obj/item/reagent_containers/food/pill/patch/silver_sulf,
-/turf/simulated/floor/plasteel,
-/area/space)
-"Bi" = (
-/obj/machinery/computer/arcade,
-/turf/simulated/floor/plasteel,
-/area/space)
-"BO" = (
-/obj/structure/closet/secure_closet/syndicate,
-/obj/item/storage/belt/security/webbing,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/gun/projectile/automatic/pistol,
-/obj/item/melee/classic_baton,
-/obj/item/restraints/handcuffs,
-/obj/item/restraints/handcuffs,
-/obj/item/clothing/head/helmet/night,
-/obj/item/clothing/suit/armor/vest/combat,
 /turf/simulated/floor/plasteel,
 /area/space)
 "Cz" = (
@@ -325,238 +480,381 @@
 /turf/simulated/floor/plasteel,
 /area/space)
 "CO" = (
-/obj/machinery/computer/account_database,
-/turf/simulated/floor/plasteel,
+/obj/structure/chair/office/dark,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/start/security_officer,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "EH" = (
-/obj/structure/bed,
-/obj/structure/curtain/open,
-/obj/item/bedsheet/medical{
-	level = 1.4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "EU" = (
 /turf/space,
 /area/space)
 "Fh" = (
-/obj/structure/table/glass,
-/obj/item/storage/toolbox/surgery{
-	pixel_x = -1;
-	pixel_y = 2
+/obj/machinery/computer/brigcells,
+/turf/simulated/floor/plasteel{
+	dir = 1
 	},
-/turf/simulated/floor/plasteel,
 /area/space)
 "FP" = (
-/obj/machinery/computer/security{
-	network = list("UO45")
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plating,
 /area/space)
 "FR" = (
 /obj/machinery/gateway/centeraway{
 	calibrated = 0
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "FT" = (
-/obj/machinery/door/window/northleft{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/obj/structure/rack/gunrack,
-/obj/item/gun/projectile/automatic/wt550,
-/obj/item/gun/projectile/automatic/wt550,
-/turf/simulated/floor/plasteel,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "Ga" = (
-/obj/machinery/door/airlock/syndicate/medical,
-/obj/structure/curtain/open,
-/turf/simulated/floor/plasteel,
-/area/space)
-"GO" = (
-/obj/structure/table/glass,
-/obj/item/storage/firstaid/regular,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
 /area/space)
 "Hz" = (
-/obj/item/twohanded/required/kirbyplants,
-/turf/simulated/floor/plasteel,
+/obj/structure/closet/secure_closet/security,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -24
+	},
+/turf/simulated/floor/plasteel{
+	dir = 9;
+	icon_state = "red"
+	},
 /area/space)
 "HC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "Ib" = (
 /obj/effect/landmark/awaystart,
 /turf/simulated/floor/plasteel,
 /area/space)
 "Ik" = (
-/obj/machinery/door/airlock/syndicate/security/glass,
-/turf/simulated/floor/plasteel,
+/obj/machinery/door/airlock/security/glass{
+	id_tag = "BrigRight";
+	name = "Brig";
+	req_access = list(63)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plasteel{
+	dir = 1;
+	icon_state = "red"
+	},
 /area/space)
 "Is" = (
-/obj/structure/closet/secure_closet/reagents,
-/obj/structure/window/reinforced,
-/turf/simulated/floor/plasteel,
-/area/space)
-"Iv" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/structure/closet/secure_closet,
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/space)
+"Iv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/door/airlock/security/glass{
+	name = "Brig Reception";
+	req_access = list(63)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "KR" = (
 /obj/machinery/gateway{
 	dir = 9
 	},
-/turf/simulated/floor/plasteel{
-	dir = 1;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "KV" = (
-/obj/structure/chair/office{
-	dir = 8;
-	tag = "icon-chair (WEST)"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/machinery/door/airlock/security/glass{
+	name = "Brig Reception";
+	req_access = list(63)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "La" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable,
+/obj/machinery/door/poddoor{
+	density = 0;
+	icon_state = "open";
+	id_tag = "Brig_lockdown";
+	name = "Brig Lockdown";
+	opacity = 0
 	},
-/obj/item/clothing/suit/armor/riot,
-/obj/item/clothing/head/helmet/riot,
-/obj/item/shield/riot,
-/obj/item/kitchen/knife/combat/survival,
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plating,
 /area/space)
 "Lf" = (
 /obj/machinery/gateway{
 	dir = 10
 	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "Ln" = (
 /obj/machinery/gateway{
 	dir = 1
 	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "LG" = (
 /obj/machinery/gateway,
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "vault"
-	},
+/turf/simulated/floor/plasteel,
 /area/space)
 "LR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plasteel{
-	icon_state = "dark"
+	dir = 1
 	},
 /area/space)
 "Mm" = (
-/obj/structure/table/glass,
-/obj/machinery/reagentgrinder{
-	pixel_x = -1;
-	pixel_y = 9
+/obj/machinery/computer/security{
+	network = list("SS13","Research Outpost","Mining Outpost")
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "red"
+	},
 /area/space)
 "MF" = (
-/obj/machinery/computer/operating{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/plasteel,
+/turf/simulated/floor/plasteel{
+	dir = 9;
+	icon_state = "red"
+	},
 /area/space)
 "Ns" = (
-/obj/item/storage/secure/safe{
-	pixel_x = -32
+/obj/machinery/light,
+/turf/simulated/floor/plasteel{
+	icon_state = "red"
 	},
-/turf/simulated/floor/plasteel,
 /area/space)
 "Nw" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/plasteel,
 /area/space)
 "On" = (
-/obj/structure/window/reinforced{
+/turf/simulated/floor/plasteel{
 	dir = 1;
-	layer = 2.9
+	icon_state = "red"
 	},
-/obj/structure/bed,
-/turf/simulated/floor/plasteel,
 /area/space)
 "OA" = (
-/obj/structure/chair/office{
-	dir = 4;
-	tag = "icon-chair (EAST)"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/plasteel,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
 /area/space)
 "Rf" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/plasteel,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/camera{
+	c_tag = "Brig Reception";
+	dir = 8;
+	network = list("SS13","Security")
+	},
+/turf/simulated/floor/plasteel{
+	dir = 6;
+	icon_state = "red"
+	},
 /area/space)
 "Rn" = (
-/obj/item/storage/secure/safe{
-	pixel_x = -32
-	},
-/turf/space,
-/area/space)
-"RY" = (
-/obj/machinery/door/airlock/syndicate/research,
-/turf/simulated/floor/plasteel,
-/area/space)
-"Sb" = (
-/obj/machinery/door/airlock/syndicate/maintenance,
-/turf/simulated/floor/plasteel,
-/area/space)
-"Sw" = (
-/obj/machinery/chem_master,
-/turf/simulated/floor/plasteel,
-/area/space)
-"SY" = (
-/obj/machinery/door/airlock/syndicate/public,
-/obj/machinery/door/airlock/syndicate/public,
-/turf/simulated/floor/plasteel,
-/area/space)
-"TW" = (
-/obj/structure/window/full/reinforced,
-/turf/simulated/floor/plasteel,
-/area/space)
-"Ua" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/reagent_containers/iv_bag/blood/OMinus,
-/obj/item/reagent_containers/iv_bag/blood/ABPlus,
-/obj/item/reagent_containers/iv_bag/salglu,
-/obj/item/reagent_containers/iv_bag/salglu,
-/turf/simulated/floor/plasteel,
-/area/space)
-"UT" = (
-/obj/machinery/door/window/northleft{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/rack/gunrack,
-/obj/item/gun/projectile/shotgun/automatic,
-/obj/item/gun/projectile/shotgun/automatic,
-/turf/simulated/floor/plasteel,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/space)
+"RY" = (
+/obj/machinery/computer/security{
+	network = list("SS13","Research Outpost","Mining Outpost")
+	},
+/turf/simulated/floor/plasteel{
+	dir = 6;
+	icon_state = "red"
+	},
+/area/space)
+"Sb" = (
+/obj/machinery/computer/secure_data,
+/turf/simulated/floor/plasteel{
+	dir = 10;
+	icon_state = "red"
+	},
+/area/space)
+"Sw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 1
+	},
+/area/space)
+"SY" = (
+/obj/machinery/door/poddoor/multi_tile,
+/obj/machinery/door/poddoor/multi_tile,
+/turf/space,
+/area/space)
+"TW" = (
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"Ua" = (
+/obj/structure/table/reinforced,
+/obj/item/book/manual/security_space_law,
+/obj/item/book/manual/sop_legal{
+	pixel_x = 2;
+	pixel_y = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "red"
+	},
+/area/space)
+"UT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/flasher{
+	desc = "A floor-mounted flashbulb device.";
+	id = "brigkpp";
+	layer = 5;
+	pixel_y = 55;
+	range = 3
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "redfull";
+	tag = "icon-redfull (NORTHWEST)"
+	},
 /area/space)
 "Vk" = (
 /obj/machinery/door/poddoor/multi_tile,
@@ -570,18 +868,26 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/space)
-"Ww" = (
-/obj/machinery/door/window/westleft,
-/turf/simulated/floor/plasteel,
-/area/space)
 "WO" = (
-/obj/structure/table,
-/obj/item/storage/box/donkpockets,
-/turf/simulated/floor/plasteel,
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "red"
+	},
 /area/space)
 "Zz" = (
-/obj/machinery/optable,
-/turf/simulated/floor/plasteel,
+/obj/item/twohanded/required/kirbyplants,
+/obj/item/radio/intercom{
+	pixel_x = 28
+	},
+/turf/simulated/floor/plasteel{
+	dir = 5;
+	icon_state = "red"
+	},
 /area/space)
 
 (1,1,1) = {"
@@ -2035,24 +2341,24 @@ EU
 EU
 EU
 EU
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
@@ -2292,31 +2598,31 @@ EU
 EU
 EU
 EU
-nB
-EH
-mx
-yl
-nf
-mx
-mx
-nB
-Rf
-Fh
-MF
-nB
-jS
-mx
-mY
-rH
-Sw
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
 HC
 HC
-LR
-LR
+mx
+mx
 wv
 ht
 eZ
@@ -2338,26 +2644,26 @@ EU
 EU
 EU
 EU
+nB
+jS
+tI
+hN
+nB
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+nB
+Fh
+yR
+nB
+nB
+nB
+nB
+uv
+lk
+La
+nB
+nB
 EU
 EU
 EU
@@ -2549,24 +2855,24 @@ EU
 EU
 EU
 EU
-nB
-rL
-mx
-mx
-cj
-mx
-mx
-nB
-mx
-mx
-Zz
-nB
-jS
-mx
-mx
-mx
-lk
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
@@ -2584,37 +2890,37 @@ mx
 mx
 mx
 nB
+nB
+nB
+nB
+nB
+nB
 EU
 EU
 EU
 EU
 EU
 EU
+iu
+On
+EH
+bW
+lZ
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+iu
+MF
+rL
+Mm
+nF
+iu
+Hz
+rH
+cj
+Sb
+sG
+iu
 EU
 EU
 EU
@@ -2806,28 +3112,28 @@ EU
 EU
 EU
 EU
-nB
-EH
-mx
-yl
-nf
-mx
-mx
-nB
-mx
-mx
-Rf
-nB
-mx
-mx
-mx
-mx
-hN
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
-LR
+mx
 Ln
 FR
 LG
@@ -2841,37 +3147,37 @@ mx
 mx
 mx
 nB
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
 EU
 EU
 EU
+iz
+rY
+UT
+Ns
+lZ
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+yl
+Rn
+vH
+FT
+LR
+Iv
+OA
+kk
+Sw
+CO
+rD
+iz
 EU
 EU
 EU
@@ -3063,24 +3369,24 @@ EU
 EU
 EU
 EU
-nB
-nB
-nB
-nB
-nB
-mx
-mx
-nB
-mx
-mx
-Ua
-nB
-mx
-mx
-mx
-mx
-Mm
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
@@ -3097,6 +3403,11 @@ mx
 mx
 mx
 mx
+mx
+mx
+mx
+mx
+mx
 nB
 EU
 EU
@@ -3104,31 +3415,26 @@ EU
 EU
 EU
 EU
+FP
+On
+EH
+bW
+lZ
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+FP
+Zz
+Ua
+WO
+Rf
+FP
+uT
+mY
+Is
+RY
+hF
+FP
 EU
 EU
 EU
@@ -3320,31 +3626,31 @@ EU
 EU
 EU
 EU
-nB
-EH
-mx
-yl
-nf
-mx
-mx
-nB
-mx
-mx
-mx
-nB
-Ww
-hF
-mx
-mx
-mx
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
-LR
+mx
 HC
-LR
-LR
+mx
+mx
 zJ
 mx
 mx
@@ -3355,37 +3661,37 @@ mx
 mx
 mx
 nB
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
 EU
 EU
 EU
+nB
+Ik
+sk
+xZ
+lZ
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+nB
+nB
+Ga
+tD
+nB
+nB
+nB
+TW
+KV
+tD
+nB
+nB
 EU
 EU
 EU
@@ -3577,24 +3883,24 @@ EU
 EU
 EU
 EU
-nB
-rL
-mx
-mx
-cj
-mx
-mx
-nB
-mx
-mx
-mx
-nB
-mx
-iz
-mx
-mx
-mx
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 nB
@@ -3612,11 +3918,11 @@ Vk
 Vk
 nB
 nB
-EU
-EU
-EU
-EU
-EU
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
@@ -3814,6 +4120,34 @@ EU
 EU
 EU
 EU
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -3835,45 +4169,17 @@ EU
 EU
 EU
 nB
-EH
-mx
-yl
-nf
-mx
-mx
-nB
-Bf
-GO
-mx
-nB
-mx
-Is
-mx
-mx
-mx
-nB
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-nB
 mx
 mx
 mx
 mx
 mx
 nB
-EU
-EU
-EU
-EU
-EU
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
@@ -4071,44 +4377,44 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
 nB
-nB
-nB
-nB
-Ga
-Ga
-nB
-nB
-nB
-rY
-nB
-nB
-nB
-rY
-nB
-nB
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -4126,11 +4432,11 @@ mx
 mx
 mx
 nB
-EU
-EU
-EU
-EU
-EU
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
@@ -4328,32 +4634,7 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-mx
-mx
-mx
-mx
-mx
-mx
-mx
+nB
 mx
 mx
 mx
@@ -4376,6 +4657,31 @@ EU
 EU
 EU
 EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 nB
 mx
 mx
@@ -4383,11 +4689,11 @@ mx
 mx
 mx
 nB
-EU
-EU
-EU
-EU
-EU
+mx
+mx
+mx
+mx
+nB
 EU
 EU
 EU
@@ -4585,32 +4891,7 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-mx
-mx
-mx
-mx
-mx
-mx
-mx
+nB
 mx
 mx
 mx
@@ -4623,6 +4904,31 @@ mx
 mx
 mx
 nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -4640,15 +4946,15 @@ Vk
 Vk
 nB
 nB
+mx
+mx
+mx
+mx
 nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -4842,70 +5148,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-mx
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-rY
-rY
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
 nB
 mx
 mx
 mx
 mx
-cc
+mx
+mx
+mx
+mx
 nB
-UT
-uT
-FT
-tI
 nB
-sG
-La
-La
 nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+mx
+mx
+mx
+mx
+mx
+nB
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -5099,60 +5405,6 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-RY
-mx
-mx
-sk
-sk
-mx
-mx
-mx
-mx
-sk
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-rD
-cS
-mx
-mx
-mx
-cc
 nB
 mx
 mx
@@ -5162,7 +5414,61 @@ mx
 mx
 mx
 mx
+Vk
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+em
+mx
+mx
+mx
+mx
+mx
 nB
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -5356,25 +5662,19 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+nB
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
+mx
+Vk
 mx
 mx
 mx
@@ -5386,14 +5686,20 @@ mx
 mx
 mx
 mx
-RY
+Vk
 mx
 mx
 mx
 mx
 mx
 mx
-sk
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
 mx
 mx
 mx
@@ -5405,21 +5711,21 @@ mx
 mx
 mx
 SY
-cS
-mx
-mx
-mx
-cc
-nB
-mx
-mx
-mx
 mx
 mx
 mx
 mx
 mx
 nB
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -5613,70 +5919,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
+nB
+mx
+mx
 mx
 mx
 mx
 mx
 mx
 mx
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-Sb
-nB
-nB
-qX
-nB
-nB
+Vk
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+Vk
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+em
+mx
+mx
+mx
+mx
+mx
 nB
 mx
 mx
 mx
 mx
-cc
 nB
-nB
-nB
-nB
-nB
-nB
-Cz
-nB
-nB
-nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -5870,70 +6176,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
 mx
 mx
 mx
+mx
+mx
+mx
+mx
+mx
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
 nB
 mx
 mx
-CO
-TW
 mx
 mx
 mx
-mx
-mx
-Ik
-mx
-mx
-mx
-TW
-mx
-mx
-BO
-BO
 nB
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -6127,70 +6433,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
 mx
 mx
 mx
-nB
-mx
-mx
-de
-nF
 mx
 mx
 mx
 mx
-mx
-TW
-mx
-mx
-mx
-Ik
 mx
 mx
 mx
 mx
 nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
+nB
+mx
+mx
+mx
+mx
+mx
+nB
+nB
+nB
+nB
+nB
+nB
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -6384,70 +6690,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
 mx
 mx
 mx
-nB
-mx
-mx
-Nw
-TW
 mx
 mx
 mx
 mx
-mx
-tD
-de
-mx
-mx
-TW
 mx
 mx
 mx
 mx
 nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
+nB
+mx
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -6641,70 +6947,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
 mx
 mx
 mx
-nB
-mx
-mx
-mx
-TW
 mx
 mx
 mx
 mx
-mx
-TW
-FP
-FP
-mx
-TW
 mx
 mx
 mx
 mx
 nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
+nB
+mx
+mx
+mx
+mx
+mx
+nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -6898,70 +7204,70 @@ EU
 EU
 EU
 EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
 nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 mx
 mx
 mx
 nB
+mx
+mx
+mx
+mx
+mx
 nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -7195,30 +7501,30 @@ EU
 EU
 EU
 EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
 nB
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-xZ
-mx
-mx
-mx
-uv
 nB
-bW
-mx
-bW
+nf
 nB
+Cz
+Cz
+nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -7452,30 +7758,30 @@ EU
 EU
 EU
 EU
+EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
+mx
+Nw
+nf
+mx
+mx
 nB
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-nB
-lZ
-mx
-mx
-mx
-rD
-mx
-mx
-bW
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -7709,30 +8015,30 @@ EU
 EU
 EU
 EU
-nB
-nB
-xZ
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-WO
+EU
+EU
+EU
+EU
+EU
+EU
 mx
 mx
-OA
-nB
-bW
 mx
-bW
+mx
+mx
+cc
+mx
+mx
 nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -7966,30 +8272,30 @@ EU
 EU
 EU
 EU
+EU
+EU
+EU
+EU
+EU
+EU
+mx
+mx
+mx
+mx
+mx
+nf
+mx
+mx
 nB
-iu
-mx
-mx
-On
-mx
-On
-mx
-On
-mx
-On
-mx
-On
-Ns
-nB
-vH
-mx
-mx
-rL
-nB
-bW
-mx
-bW
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -8223,30 +8529,30 @@ EU
 EU
 EU
 EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 nB
-uv
-mx
-mx
-kk
-yR
-kk
-yR
-kk
-yR
-Iv
-yR
-kk
-yR
 nB
-mx
-mx
-mx
-KV
+Cz
+Cz
 nB
-bW
-mx
-bW
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -8480,30 +8786,30 @@ EU
 EU
 EU
 EU
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 mx
 mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-mx
-nB
-Bi
-Bi
-mx
-Hz
-nB
-bW
-mx
-bW
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -8737,30 +9043,30 @@ EU
 EU
 EU
 EU
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
-nB
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
+EU
 EU
 EU
 EU
@@ -16965,7 +17271,7 @@ EU
 EU
 EU
 EU
-Rn
+EU
 EU
 EU
 EU
@@ -18506,7 +18812,7 @@ EU
 EU
 EU
 EU
-Rn
+EU
 EU
 EU
 EU
