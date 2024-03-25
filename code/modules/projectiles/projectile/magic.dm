@@ -71,6 +71,21 @@
 	exp_flash = 4
 	exp_fire= 5
 
+/obj/item/projectile/magic/waterball
+	name = "bolt of waterball"
+	icon_state = "fireball"
+	damage = 20
+	damage_type = BRUTE
+	nodamage = FALSE
+
+/obj/item/projectile/magic/waterball/on_hit(var/target)
+	. = ..()
+	chem_splash(loc, 5, list("water" = 5000))
+	if(ismob(target)) //multiple flavors of pain
+		var/mob/living/M = target
+		M.take_overall_damage(0,10) //between this 10 burn, the 10 brute, the explosion brute, and the onfire burn, your at about 65 damage if you stop drop and roll immediately
+
+
 /obj/item/projectile/magic/resurrection
 	name = "bolt of resurrection"
 	icon_state = "ion"
