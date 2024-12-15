@@ -247,10 +247,9 @@
 	desc = "A cold metal wall engraved with indecipherable symbols. Studying them causes your head to pound."
 	icon = 'icons/turf/walls/cult_wall.dmi'
 	icon_state = "cult"
-	base_icon_state = "cult_wall"
 	smooth = NONE
 	canSmoothWith = null
-	smoothing_groups = NONE
+	smoothing_groups = null
 
 
 /turf/simulated/wall/indestructible/mineral_rock
