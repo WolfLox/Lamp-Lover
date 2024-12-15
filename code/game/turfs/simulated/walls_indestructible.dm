@@ -248,7 +248,7 @@
 	icon = 'icons/turf/walls/cult_wall.dmi'
 	icon_state = "cult"
 	base_icon_state = "cult_wall"
-	smooth = SMOOTH_BITMASK
+	smooth = NONE
 	canSmoothWith = null
 	smoothing_groups = NONE
 
